@@ -15,7 +15,7 @@ const packageName = pkg.name.replace('@nl/', '');
 const cjs = {
 	input: inputFileName,
 	output: {
-		file: `${buildFolder}bundle-cjs.js`,
+		file: `${buildFolder}index.js`,
 		format: 'cjs'
 	},
 	plugins: plugins,
@@ -23,7 +23,7 @@ const cjs = {
 const esm = {
 	input: inputFileName,
 	output: {
-		file: `${buildFolder}bundle-esm.js`,
+		file: `${buildFolder}index.mjs`,
 		format: 'es'
 	},
 	plugins: plugins,
@@ -31,7 +31,7 @@ const esm = {
 const umd = {
 	input: inputFileName,
 	output: {
-		file: `${buildFolder}bundle-umd.js`,
+		file: `${buildFolder}index.umd.js`,
 		format: 'umd',
 		name: packageName,
 	},
